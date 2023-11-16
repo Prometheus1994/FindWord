@@ -1,8 +1,11 @@
-from flask import Flask, render_template, request
 import nltk
+
+nltk.download('words')
+
+from flask import Flask, render_template, request
 from nltk.corpus import words as nltk_words
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 
 @app.route('/')
