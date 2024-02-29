@@ -24,7 +24,7 @@ def find_words():
             continue
         else:
             for i in range(len(word)):
-                if word[i] == input_word[i] or input_word[i] == '_':
+                if word[i].lower() == input_word[i].lower() or input_word[i] == '_':
                     counter += 1
                 else:
                     break
